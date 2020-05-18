@@ -509,6 +509,15 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 47
+      m_TileSpriteIndex: 46
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -1, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -614,6 +623,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 390976a47abb78d4ea81d80c5cb7296d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 96ef28e454237934d9622013b7894976, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 18f6bec3b3e14a0498e549ae0a0e0dc7, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -6414447125379547148, guid: 9426360572edca3499bfbb330cd203eb,
@@ -750,8 +761,10 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 3747544219709766277, guid: d5262cf782c71b8439ee4af0a65d00a7,
       type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 0f6bbc3fe987b23409b613db61aec10b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 49
+  - m_RefCount: 50
     m_Data:
       e00: 1
       e01: 0
@@ -788,7 +801,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 53
+  - m_RefCount: 54
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -872,7 +885,7 @@ GameObject:
   - component: {fileID: 8457934762811164848}
   - component: {fileID: 8781117685436985213}
   m_Layer: 31
-  m_Name: Manual Tiles
+  m_Name: Main Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
