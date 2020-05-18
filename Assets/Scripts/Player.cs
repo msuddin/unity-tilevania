@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     // Config
     [SerializeField] float runSpeed = 5f;
+    [SerializeField] float jumpSpeed = 30f;
 
     // State
     bool isAlive = true;
@@ -14,11 +15,13 @@ public class Player : MonoBehaviour
     // Cached component references
     Rigidbody2D myRigidbody;
     Animator myAnimator;
+    Collider2D myCollider2D;
 
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        myCollider2D = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class Player : MonoBehaviour
     {
         Run();
         FlipSprite();
+        Jump();
     }
 
     private void Run()
@@ -35,7 +39,20 @@ public class Player : MonoBehaviour
         myRigidbody.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-         myAnimator.SetBool("Running", playerHasHorizontalSpeed);
+        myAnimator.SetBool("Running", playerHasHorizontalSpeed);
+    }
+
+    private void Jump()
+    {
+        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            return;
+        }
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
+        {
+            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+            myRigidbody.velocity += jumpVelocityToAdd;
+        }
     }
 
     private void FlipSprite()
