@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Background
   - Enemy
-  - 
+  - Hazzards
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 162415723
+    locked: 0
+  - name: Hazzards
+    uniqueID: 1418353919
     locked: 0
   - name: Enemy
     uniqueID: 1040828415
