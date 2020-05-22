@@ -20,7 +20,7 @@ TagManager:
   - Background
   - Enemy
   - Hazzards
-  - 
+  - Interactables
   - 
   - 
   - 
@@ -45,8 +45,8 @@ TagManager:
   - name: Background
     uniqueID: 416537893
     locked: 0
-  - name: Foreground
-    uniqueID: 1583964397
+  - name: Interactables
+    uniqueID: 1535020225
     locked: 0
   - name: Climbing
     uniqueID: 162415723
@@ -59,4 +59,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1463264125
+    locked: 0
+  - name: Foreground
+    uniqueID: 1583964397
     locked: 0

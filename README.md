@@ -10,3 +10,5 @@ A Tile based platformer game where the player races against the clock to complet
  - Enemy with basic path finding
  - Player dying
  - Level Hazzards
+ - Main Menu with multiple levels
+ - Loading to next level
