@@ -4392,15 +4392,30 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7114652335408862513, guid: e3f660e48caa83a40b5051a595da957d,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114652335408862513, guid: e3f660e48caa83a40b5051a595da957d,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114652335408862513, guid: e3f660e48caa83a40b5051a595da957d,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7114652335408862670, guid: e3f660e48caa83a40b5051a595da957d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.510761
+      value: -16.520584
       objectReference: {fileID: 0}
     - target: {fileID: 7114652335408862670, guid: e3f660e48caa83a40b5051a595da957d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.840329
+      value: -6.8403587
       objectReference: {fileID: 0}
     - target: {fileID: 7114652335788092486, guid: e3f660e48caa83a40b5051a595da957d,
         type: 3}
@@ -4496,10 +4511,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1768249040, guid: 2e85523c9fd07a149b3d2dc8fab3ff08, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7988438226384745346, guid: 2e85523c9fd07a149b3d2dc8fab3ff08,
         type: 3}
       propertyPath: m_Name
@@ -4558,11 +4569,6 @@ PrefabInstance:
     - target: {fileID: 7988438226384745348, guid: 2e85523c9fd07a149b3d2dc8fab3ff08,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8601055764582909695, guid: 2e85523c9fd07a149b3d2dc8fab3ff08,
-        type: 3}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
