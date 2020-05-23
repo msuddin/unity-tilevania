@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 30f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
+    [SerializeField] float delayPlayerDeathLoadTime = 3f;
 
     // State
     bool isAlive = true;
@@ -103,6 +104,14 @@ public class Player : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             GetComponent<Rigidbody2D>().velocity = deathKick;
+
+            StartCoroutine(DelayPlayerDeath());
         }
+    }
+
+    private IEnumerator DelayPlayerDeath()
+    {
+        yield return new WaitForSeconds(delayPlayerDeathLoadTime);
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 }

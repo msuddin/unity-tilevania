@@ -18,6 +18,24 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadFirstLevel()
     {
+        ResetPlayerLives();
         SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    private void ResetPlayerLives()
+    {
+        var instanceOfGameSession = FindObjectOfType<GameSession>();
+
+        if (!instanceOfGameSession)
+        {
+            return;
+        }
+
+        instanceOfGameSession.ResetPlayerLives();
     }
 }
