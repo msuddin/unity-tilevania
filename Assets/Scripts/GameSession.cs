@@ -2,11 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] int playerStartingLives = 3;
     [SerializeField] int playerLives = 3;
+    [SerializeField] int score = 0;
+
+    [SerializeField] Text livesText;
+    [SerializeField] Text scoreText;
+
+    private void Start()
+    {
+        livesText.text = playerLives.ToString();
+        scoreText.text = score.ToString();
+    }
+
+    public void AddToScore(int pointsToAdd)
+    {
+        score += pointsToAdd;
+        scoreText.text = score.ToString();
+    }
 
     private void Awake()
     {
@@ -26,18 +43,25 @@ public class GameSession : MonoBehaviour
     {
         if (playerLives > 1)
         {
-            playerLives--;
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+            TakeLife();
         }
         else
         {
-            SceneManager.LoadScene("Game Over");
+            ResetGameSession();
         }
     }
 
-    public void ResetPlayerLives()
+    private void TakeLife()
     {
-        playerLives = playerStartingLives;
+        playerLives--;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+        livesText.text = playerLives.ToString();
+    }
+
+    private void ResetGameSession()
+    {
+        SceneManager.LoadScene("Game Over");
+        Destroy(gameObject);
     }
 }
